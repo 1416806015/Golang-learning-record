@@ -38,7 +38,7 @@ string类型转基本型
 
     引入自己创建的包，运行时出现编译器无法找到它的位置。即使配置了环境变量，编译器仍然无法正确找到包的位置。这是由于从Go的1.11版本之后，已不再推荐使用GOPATH来构建应用了
 
-![](C:\Users\chen\AppData\Roaming\marktext\images\2024-03-04-15-27-10-image.png)
+![](./docs/assets/unit2-demo1-issue.png)
 
 解决方案：
 
@@ -56,7 +56,6 @@ go env -w GO111MODULE=off
 GO111MODULE=off 无模块支持，go 会从 GOPATH 和 vendor 文件夹寻找包。
 GO111MODULE=on 模块支持，go 会忽略 GOPATH 和 vendor 文件夹，只根据 go.mod 下载依赖。
 GO111MODULE=auto 在 $GOPATH/src 外面且根目录有 go.mod 文件时，开启模块支持。
-
 
 ## 变量命名
 
